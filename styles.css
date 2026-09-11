@@ -1,0 +1,30 @@
+body{
+    background-color: #e6eff9;
+}
+h1{
+    color: #0a2d5e;
+    background-color: #ffffff;
+     padding: 10px;
+}
+h2{
+    color: #0a2d5e;
+}
+h4{
+     color: #0a2d5e;
+ }
+div{
+    background-color: #dce8f5;
+    color: #0a2d5e;
+    width:600px;
+}
+footer{
+    background-color: #ffffff;
+    color: #0a2d5e;
+}
+button{
+    background-color: #0a2d5e;
+    color: #ffffff;
+}
+figcaption{
+    color: #0a2d5e;
+}
