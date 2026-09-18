@@ -1,30 +1,66 @@
+:root {
+    --font-color: #0a2d5e;
+    --base-color: #e6eff9;
+    --blok-color: #dce8f5;
+    --spc-color: #ffffff;
+    --base-font: Arial;
+}
+*{
+    color: var(--font-color);
+    font-family: var(--base-font), sans-serif;}
 body{
-    background-color: #e6eff9;
+    background-color: var(--base-color);
 }
-h1{
-    color: #0a2d5e;
-    background-color: #ffffff;
-     padding: 10px;
-}
+h1, footer{
+    background-color: var(--spc-color);
+    margin: 6px;
+    padding: 15px;}
 h2{
-    color: #0a2d5e;
+    font-size:x-large;
+     text-decoration: underline;
 }
-h4{
-     color: #0a2d5e;
- }
 div{
-    background-color: #dce8f5;
-    color: #0a2d5e;
+    background-color: var(--blok-color);
+    height: 120px;
     width:600px;
-}
-footer{
-    background-color: #ffffff;
-    color: #0a2d5e;
+    margin: 10px;
+    padding: 10px;
 }
 button{
-    background-color: #0a2d5e;
-    color: #ffffff;
+    background-color: var(--font-color);
+    color: var(--spc-color);
 }
-figcaption{
-    color: #0a2d5e;
+ul.grid_list {
+    position: relative; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));}
+ul.grid_list li {
+    padding: 10px;
+    background-color: var(--spc-color);
+    border: 4px double var(--font-color);
+    color:var(--font-color);
+    text-align: center;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: default;
+}
+
+ul.grid_list li:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 4px 2px var(--font-color)}
+
+ul.grid_list li:active {
+    transform: scale(0.98);
+    box-shadow: 4px 4px 0px 0px var(--font-color)}
+.grid_list_badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 8px;
+    background-color: var(--font-color);
+    color: var(--spc-color);
+    font-size: 10px;
+    text-transform: uppercase;
 }

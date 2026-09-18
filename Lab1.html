@@ -2,28 +2,34 @@
 <html lang="ru">
   <head>
         <meta charset="utf-8">
-        <title>Лабораторная 1</title>
-        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <title>Лабораторная 2</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <style>
+            input[type="email"] {
+                padding: 15px;
+                border-radius: 5px;
+            }
+            input[type="email"]:focus { 
+                border: 6px solid var(--font-color);
+            }
         </style>
     </head>
     <body>
-      <header>
-            <h1>Студент-разработчик</h1>
-            <div>Угорелова Вера. 932402</div>
+      <header style="padding: 20px; ">
+            <h1 style="font-size:xx-large">Студент-разработчик</h1>
+            <div style="height: 100px"> Угорелова Вера. 932402</div>
             <figure>
                 <figcaption>Угорелова В.Е. Июль 2026</figcaption>
                 <img src="photo.jpg" alt="Совершенно серьезная фотография" height="260" width="190">
             </figure>
-            <div>Страница создана ради шутки по причине остуствия</div>
-            <div>у автора достижений в области разработки</div>
+            <div style="height: 100px"> Страница создана ради шутки по причине остуствия<br> у автора достижений в области разработки</div>
         </header>
         <main>
             <section>
                 <h2>Навыки</h2>
                     <div>
-                        <ul>
-                            <li>Здоровый двенадцатичасовой сон за три часа - 10</li>
+                        <ul class="grid_list" style="font-size: small;">
+                            <li style="position: relative"><span class="grid_list_badge">Top skill</span>Здоровый двенадцатичасовой сон за три часа - 10</li>
                             <li>Схемы программ на листочке - 9</li>
                             <li>Пропущенные душные лекции - 0</li>
                             <li>Умение пользоваться дипсиком - 2</li>
@@ -45,7 +51,7 @@
                     </div>
             </section>
         </main>
-        <aside style="float:right; width:200px; background-color: rgb(255, 255, 255)">
+        <aside style="float:right; width:200px; background-color: var( --spc-color);">
             <h2>Любимые инструменты</h2>
             <div>
                 <ol>
@@ -56,15 +62,16 @@
             </div>
         </aside>
         <footer>
+            <h2>Обратная связь</h2>
             <form action="mailto:uve.trash@mail.ru" method="post" enctype="text/plain">
-                <div>
+                <div style="height: 200px"> 
                     <input type="text" name="name" placeholder="Имя" required><br>
                     <input type="email" name="email" placeholder="Email" required><br>
                     <textarea name="message" placeholder="Сообщение" required></textarea><br>
                     <button type="submit">Отправить</button>
                 </div>
             </form>
-            <p>Лицензионное соглашение - честное слово<br>
+            <p style="font-size: small;">Лицензионное соглашение - честное слово<br>
             Copyright © 2026. ИПМКН ТГУ</p>
         </footer>
     </body>
