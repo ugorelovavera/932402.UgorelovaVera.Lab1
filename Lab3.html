@@ -23,7 +23,7 @@
       <div class="header-line"> Угорелова Вера. 932402</div>
       <figure>
         <figcaption>Угорелова В.Е. Июль 2026</figcaption>
-        <img src="photo.jpg" alt="Совершенно серьезная фотография" height="260" width="190">
+        <img src="images/photo.jpg" alt="Совершенно серьезная фотография" height="260" width="190">
       </figure>
       <div class="header-line"> Страница создана ради шутки по причине остуствия<br> у автора достижений в области разработки</div>
     </header>
@@ -55,7 +55,7 @@
         <h2>Проекты</h2>
         <div class="projects">
           <article class="project-card">
-            <div class="project-card__icon" aria-hidden="true"></div>
+            <div class="project-card__icon" aria-hidden="true">📜</div>
             <div class="project-card__body">
               <h3 class="project-card__title">Олимпиада по истории</h3>
               <p class="project-card__stack">Стек: анализ · риторика · Word</p>
@@ -63,7 +63,7 @@
             </div>
           </article>
           <article class="project-card">
-            <div class="project-card__icon" aria-hidden="true"></div>
+            <div class="project-card__icon" aria-hidden="true">🏕️</div>
             <div class="project-card__body">
               <h3 class="project-card__title">Физматшкола ТГУ 2025</h3>
               <p class="project-card__stack">Стек: педагогика · Python · LaTeX</p>
@@ -71,7 +71,7 @@
             </div>
           </article>
           <article class="project-card">
-            <div class="project-card__icon" aria-hidden="true"></div>
+            <div class="project-card__icon" aria-hidden="true">🏕️</div>
             <div class="project-card__body">
               <h3 class="project-card__title">Физматшкола ТГУ 2026</h3>
               <p class="project-card__stack">Стек: педагогика · Python · LaTeX</p>
@@ -79,7 +79,7 @@
             </div>
           </article>
           <article class="project-card">
-            <div class="project-card__icon" aria-hidden="true"></div>
+            <div class="project-card__icon" aria-hidden="true">🤝</div>
             <div class="project-card__body">
               <h3 class="project-card__title">Рукопожатие Бабанова А.М.</h3>
               <p class="project-card__stack">Стек: обаяние · харизма</p>
@@ -92,20 +92,28 @@
         <h2>Фото</h2>
         <div class="gallery__grid">
           <figure class="gallery__item">
-            <img src="paper.jpg" alt="Ведомость с итогами олимпиады">
+            <img src="images/paper.jpg" alt="Ведомость с итогами олимпиады">
             <figcaption>Ведомость с итогами олимпиады</figcaption>
           </figure>
           <figure class="gallery__item">
-            <img src="people.jpg" alt="Клуб 14. ЛФМШ 2025">
+            <img src="images/people.jpg" alt="Клуб 14. ЛФМШ 2025">
             <figcaption>Клуб 14. ЛФМШ 2025</figcaption>
           </figure>
           <figure class="gallery__item">
-            <img src="bloks.jpg" alt="День стройки. ЛФМШ 2026">
+            <img src="images/bloks.jpg" alt="День стройки. ЛФМШ 2026">
             <figcaption>День стройки. ЛФМШ 2026</figcaption>
           </figure>
           <figure class="gallery__item">
-            <img src="arms.jpg" alt="То самое рукопожатие">
+            <img src="images/arms.jpg" alt="То самое рукопожатие">
             <figcaption>Момент рукопожатия</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/mystery.jpg" alt="Высокая стипендия">
+            <figcaption>Существует только в сказках</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/night.jpg" alt="Здоровый сон">
+            <figcaption>То, чего не существует</figcaption>
           </figure>
         </div>
       </section>
@@ -126,9 +134,12 @@
       <h2>Обратная связь</h2>
       <form action="mailto:uve.trash@mail.ru" method="post" enctype="text/plain">
         <div class="form-box">
-          <input type="text" name="name" placeholder="Имя" required><br>
-          <input type="email" name="email" placeholder="Email" required><br>
-          <textarea name="message" placeholder="Сообщение" required></textarea><br>
+          <label for="name">Имя</label>
+          <input type="text" id="name" name="name" placeholder="Имя" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+          <label for="message">Сообщение</label>
+          <textarea id="message" name="message" placeholder="Сообщение" required></textarea>
           <button type="submit">Отправить</button>
         </div>
       </form>

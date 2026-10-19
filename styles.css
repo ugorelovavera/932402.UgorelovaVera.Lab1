@@ -12,9 +12,12 @@
     font-family: var(--base-font), sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--base-color);
-    overflow-x: hidden;
 }
 
 h1, footer {
@@ -40,21 +43,27 @@ header {
     padding: 10px;
     width: 600px;
     min-height: 120px;
-    max-width: calc(100% - 20px); 
+    max-width: calc(100% - 20px);
 }
 
 .header-line {
     background-color: var(--blok-color);
     margin: 10px;
     padding: 10px;
-    height: 100px;
+    min-height: 100px;
 }
 
 .form-box {
     background-color: var(--blok-color);
     margin: 10px;
     padding: 10px;
-    height: 200px;
+    min-height: 200px;
+}
+
+.form-box label {
+    display: block;
+    margin-top: 6px;
+    font-size: small;
 }
 
 button {
@@ -96,7 +105,7 @@ a:hover {
 
 a:visited,
 a:visited:hover {
-    color: #6a3fa0; /* фиолетовый */
+    color: #6a3fa0; 
 }
 
 ul.grid_list {
@@ -197,7 +206,6 @@ aside.sidebar {
   overflow: hidden;
 }
 
-
 .project-card__icon {
   flex: 0 0 64px;
   display: flex;
@@ -215,7 +223,7 @@ aside.sidebar {
   display: flex;
   flex-direction: column;
   gap: .35rem;
-  background-color: rgba(10, 45, 94, 0.85); /* тёмный полупрозрачный оверлей */
+  background-color: rgba(10, 45, 94, 0.85); 
   color: var(--spc-color);
 }
 
@@ -230,12 +238,17 @@ aside.sidebar {
   color: var(--base-color);
 }
 
+.project-card__btn,
+.project-card__btn:link,
+.project-card__btn:visited {
+  color: var(--spc-color);
+}
+
 .project-card__btn {
   align-self: flex-start;
   margin-top: .35rem;
   padding: .5rem 1.05rem;
   background-color: var(--color-primary);
-  color: var(--spc-color);
   border: 2px solid var(--spc-color);
   text-decoration: none;
   font-weight: 600;
@@ -244,6 +257,7 @@ aside.sidebar {
   transition: background-color .2s;
 }
 .project-card__btn:hover { background-color: var(--spc-color); color: var(--color-primary); }
+
 .gallery {
   margin: 10px;
   padding: 10px;
@@ -252,8 +266,14 @@ aside.sidebar {
 
 .gallery__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));  
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+}
+
+@media (min-width: 1025px) {
+  .project-card {
+    flex: 0 0 calc((100% - 24px) / 3);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -263,7 +283,10 @@ aside.sidebar {
   .project-card {
     flex: 1 1 calc(50% - 12px);
     max-width: calc(50% - 12px);
-  }  
+  }
+  ul.grid_list {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -273,6 +296,9 @@ aside.sidebar {
   .project-card {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+  ul.grid_list {
+    grid-template-columns: 1fr;
   }
 }
 
