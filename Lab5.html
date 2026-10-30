@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная 3</title>
+    <title>Лабораторная 5</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
       input[type="email"] {
@@ -17,8 +17,7 @@
       }
     </style>
   </head>
-  <script src="script.js"></script>
-  <body>
+    <body>
     <header style="padding: 20px;">
       <h1>Студент-разработчик</h1>
       <div class="header-line"> Угорелова Вера. 932402</div>
@@ -27,6 +26,7 @@
         <img src="images/photo.jpg" alt="Совершенно серьезная фотография" height="260" width="190">
       </figure>
       <div class="header-line"> Страница создана ради шутки по причине остуствия<br> у автора достижений в области разработки</div>
+      <button id="theme-toggle" type="button">Сменить тему</button>
     </header>
         <nav class="nav">
             <ul class="nav__list">
@@ -54,6 +54,9 @@
 
       <section id="projects">
         <h2>Проекты</h2>
+        <button id="add-new-progect" type="button">Добавить проект</button>
+        <button id="delete-last" type="button">Удалить последний</button>
+        <button id="hide-projects" type="button">Свернуть проекты</button>
         <div class="projects">
           <article class="project-card">
             <div class="project-card__icon" aria-hidden="true">📜</div>
@@ -154,5 +157,7 @@
     <footer>
       <p class="copyright">Угорелова Вера, 932402, 2026</p>
     </footer>
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
   </body>
 </html>

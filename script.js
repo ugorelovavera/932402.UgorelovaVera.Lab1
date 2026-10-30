@@ -3,7 +3,7 @@ function filterHighScores(mass, param_min) {
     return height
 }
 function findMax(mass) {
-    let max = -100
+    let max = mass[0]
     for (let elem of mass) {
         if (elem > max) { max = elem }
     }
@@ -13,6 +13,14 @@ function calculateSum(mass) {
     let summ = 0
     for (let elem of mass) { summ += elem }
     return summ
+}
+function countBad(mass) {
+    let count = 0
+    for (let elem of mass) {
+        if (lab < 50) {
+        count++}
+    }
+    return count
 }
 let username = prompt("Введите имя:");
 let labs = []
@@ -27,16 +35,11 @@ for (let i = 1; i <= count_labs; i++) {
     }
     else { labs.push(0); }
 }
-let count_bad = 0
-for (let lab of labs) {
-    if (lab < 50) {
-        count_bad++
-    }
-}
+let count_bad = countBad(labs)
 let average_score  = calculateSum(labs) / count_labs
 let best_labs = filterHighScores(labs, 80)
 let count_best_labs = best_labs.length
-let max_score = findMax(best_labs)
+let max_score = findMax(labs)
 let motivate = ""
 if (average_score >= 85) {
     motivate = "\nВаш средний балл лабораторных высок! Продолжайте в том же духе!"
